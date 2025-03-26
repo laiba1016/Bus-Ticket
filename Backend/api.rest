@@ -1,3 +1,32 @@
+POST	http://localhost:5000/api/submit	Submit contact form
 
+#/Available API Routes on http://localhost:5001
 
-http://localhost:5001/api/routes/user-bookings/67e023f01b60c22c93485e35
+//Bus Routes		
+GET	http://localhost:5001/api/routes	Get all available bus routes
+GET	http://localhost:5001/api/routes/:id	Get details of a specific bus route by ID
+POST	http://localhost:5001/api/routes	Add a new bus route (Admin)
+PUT	http://localhost:5001/api/routes/:id	Update an existing bus route (Admin)
+DELETE	http://localhost:5001/api/routes/:id	Delete a bus route (Admin)
+//User Bookings		
+GET	http://localhost:5001/api/routes/user-bookings/:userId	Get all bookings of a specific user
+POST	http://localhost:5001/api/routes/bookings	Create a new booking
+GET	http://localhost:5001/api/routes/bookings/:id	Get details of a specific booking
+DELETE	http://localhost:5001/api/routes/bookings/:id
+
+#/Available API Routes on http://localhost:5003 
+
+POST http://localhost:5003/api/routes/book-seats
+{
+  "userId": "67e023f01b60c22c93485e35",
+  "passengerInfo": {
+    "name": "John Doe",
+    "phone": "1234567890",
+    "email": "johndoe@example.com"
+  },
+  "totalPrice": 100
+}
+
+GET http://localhost:5003/api/routes/bookings
+
+DELETE http://localhost:5003/api/routes/bookings/:id

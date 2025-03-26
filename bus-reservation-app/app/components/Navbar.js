@@ -19,13 +19,12 @@ const Navbar = () => {
 
         checkAuth();
 
-        // Listen for local storage changes (user login/logout)
         window.addEventListener("storage", checkAuth);
         return () => window.removeEventListener("storage", checkAuth);
     }, []);
 
     const handleLogout = () => {
-        localStorage.clear(); // Clears all local storage data
+        localStorage.clear();
         setIsAuthenticated(false);
         router.push("/Login");
         setIsOpen(false);

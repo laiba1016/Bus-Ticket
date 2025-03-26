@@ -36,14 +36,13 @@ const PassengerDetails = () => {
         }
 
         try {
-            // Retrieve userId from localStorage
+
             const userId = localStorage.getItem("userId");
             if (!userId) {
                 alert("User not authenticated.");
                 return;
             }
 
-            // Step 1: Book seats on Server 5001 (Route Server)
             const bookingResponse = await fetch(`http://localhost:5001/api/routes/book-seats`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -61,17 +60,15 @@ const PassengerDetails = () => {
                 return;
             }
 
-            // Extract bookingId from the response
             const bookingId = bookingData.bookingId;
 
-            // Step 2: Save passenger details on Server 5003 (Booking Server)
             const passengerResponse = await fetch(`http://localhost:5003/api/routes/book-seats`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     bookingId: bookingId,
                     userId: userId,
-                    passengerInfo: passengerInfo, // Use form data
+                    passengerInfo: passengerInfo,
                     totalPrice: bookingDetails.totalPrice
                 })
             });
@@ -108,7 +105,7 @@ const PassengerDetails = () => {
 
                 <h3 className="text-lg font-semibold mt-4 text-black">Total Price: Rs {bookingDetails.totalPrice}</h3>
 
-                <button type="submit" className="w-full mt-4 bg-blue-500 text-white py-2 rounded-md">
+                <button type="submit" className="w-full mt-4 bg-[#FF6B6B] text-white py-2 rounded-md">
                     Confirm Booking
                 </button>
             </form>

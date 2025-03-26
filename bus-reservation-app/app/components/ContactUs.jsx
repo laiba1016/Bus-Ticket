@@ -66,12 +66,6 @@ export default function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Type your message here..."
         />
-        {/* <button
-          type="submit"
-          className="w-full h-12 text-white text-base font-semibold leading-6 rounded-full transition-all duration-700 hover:bg-opacity-80 bg-customColor shadow-sm"
-        >
-          Send
-        </button> */}
         <button
           type="submit"
           className="w-full h-12 text-white text-base font-semibold leading-6 rounded-full transition-all duration-700 hover:bg-opacity-80 bg-[#FF6B6B] shadow-sm"

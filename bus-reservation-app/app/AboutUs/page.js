@@ -4,16 +4,6 @@ import Footer from "../components/Footer";
 const AboutUs = () => {
     return (
         <div id="aboutus" className="bg-gray-50  min-h-screen">
-            {/* 
-            <section className="bg-[#FF6B6B] text-white py-20 px-6 text-center shadow-lg">
-                <h1 className="text-5xl md:text-6xl font-extrabold tracking-wide">
-                    About Us
-                </h1>
-                <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">
-                    Reliable, Affordable, and Comfortable Travel for Everyone
-                </p>
-            </section> */}
-
             <section className="max-w-6xl mx-auto px-6 py-20">
                 <h1 className="text-[#FF6B6B] text-5xl md:text-6xl mt-8 font-extrabold tracking-wide">
                     About Us

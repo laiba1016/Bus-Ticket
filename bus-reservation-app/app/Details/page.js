@@ -14,7 +14,7 @@ const Details = () => {
     const router = useRouter();
 
     const userId = localStorage.getItem("userId");
-    console.log("User ID:", userId);
+    // console.log("User ID:", userId);
 
     const fetchRouteDetails = async () => {
         const routeId = searchParams.get("routeId");

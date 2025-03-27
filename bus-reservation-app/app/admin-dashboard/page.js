@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from "next/navigation";
 import axios from 'axios';
 import UserData from '../UserData/page';
+import withAuth from "../../utils/withAuth";
 
 const AdminDashboard = () => {
     const [activeTab, setActiveTab] = useState('dashboard');
@@ -297,4 +298,4 @@ const AdminDashboard = () => {
     );
 };
 
-export default AdminDashboard;
+export default withAuth(AdminDashboard, ['admin']);

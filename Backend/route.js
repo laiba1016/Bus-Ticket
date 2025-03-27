@@ -54,7 +54,8 @@ const createRoute = asyncHandler(async (req, res) => {
         departureDate,
         pricePerSeat,
         vehicleType,
-        facilities: facilities.split(',').map(f => f.trim()),
+        // facilities: facilities.split(',').map(f => f.trim()),
+        facilities: Array.isArray(facilities) ? facilities : facilities.split(',').map(f => f.trim()),
         totalSeats,
         availableSeats: totalSeats,
     });

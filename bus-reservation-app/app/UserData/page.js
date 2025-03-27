@@ -83,7 +83,7 @@ const UserData = () => {
                                             {booking.passengerInfo?.phone || "N/A"}
                                         </td>
                                         <td className="p-2 md:p-3 text-sm md:text-base">
-                                            ${booking.totalPrice || "N/A"}
+                                            PK {booking.totalPrice || "N/A"}
                                         </td>
                                         <td className="p-2 md:p-3 text-sm md:text-base">
                                             {booking.seats?.join(", ") || "N/A"}
